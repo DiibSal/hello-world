@@ -12,9 +12,3 @@ def usage():
     #Q: Visar endast värde 43?
     print("Din disk användning är ",disk.percent,"%")
 
-
-
-
-while True:
-    usage()
-    break
