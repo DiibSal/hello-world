@@ -1,9 +1,12 @@
 def meny():
+#Q: Önödigt att göra for loop? Går att bara göra val2 till array och printa.
    val2 = ["1. Starta övervakning", "2. Lista aktiv övervakning", "3. Skapa larm", "4. Visa larm", "5. Starta övervakningsläge"]
    for x in val2:
         print(x)
 
+
 def back():
+#Q: Hur tillåter man flera inputs i en rad?
     YN = input("Vill du återgå till startmenyn? (Y/N)")
     if YN == "y":
         meny()
@@ -15,8 +18,7 @@ def back():
         print("Inget giltigt svar")
         back()
         
-                
-
+        
 def huvudprogram():
     val = input("Välj ett alternativ:")
     if val == "1":
