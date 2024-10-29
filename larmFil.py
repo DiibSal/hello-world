@@ -2,12 +2,11 @@ import psutil
 
 class Larm:
     
-
     def __init__(self, typ, grad):
         self.typ = typ
         self.grad = grad
        
-    def alarm(self):
+    def alarm(self): #Funktion för att skriva ut larm när den triggras
         if self.typ == "CPU":
             aktuellt_varde = psutil.cpu_percent(interval=0.1)
         elif self.typ == "RAM":
@@ -20,5 +19,5 @@ class Larm:
         if aktuellt_varde >= self.grad:
             print(f"LARM: {self.typ} över {self.grad}%: Aktuell användning: {aktuellt_varde}%")
     
-    def __str__(self):
+    def __str__(self): #Sträng-metod som tillkallas när man visar larm
         return f"Larm för {self.typ} är sätt på: {self.grad}%"
